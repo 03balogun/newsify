@@ -2,7 +2,7 @@
     <div>
         <ion-card v-if="headlines.length" v-for="(headline, index) of headlines"
                   :key="index" @click="detailScreen(index)">
-            <ion-img :src="headline.urlToImage"></ion-img>
+            <ion-img :src="headline.urlToImage" :alt="headline.title"></ion-img>
             <ion-card-header>
                 <ion-card-subtitle>{{headline.source.name}}</ion-card-subtitle>
                 <ion-card-title class="title">{{headline.title}}</ion-card-title>
